@@ -36,8 +36,7 @@ class _PrimaryListDataWidgetState extends State<PrimaryListDataWidget> {
                     style: TextStyle(
                         fontSize: 11,
                         fontWeight: normal,
-                        color: black333333Color
-                    ),
+                        color: black333333Color),
                   ),
                 ),
               ),
@@ -49,9 +48,7 @@ class _PrimaryListDataWidgetState extends State<PrimaryListDataWidget> {
                   style: TextStyle(
                       fontSize: 11,
                       fontWeight: normal,
-                      color: black333333Color
-
-                  ),
+                      color: black333333Color),
                 ),
               ))
             ],
@@ -60,31 +57,43 @@ class _PrimaryListDataWidgetState extends State<PrimaryListDataWidget> {
             children: [
               Expanded(
                   child: InkWell(
-                child: Card(
-                  elevation: 3,
-                  child: Align(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 15),
-                      child: Row(
-                        children: const [
-                          Expanded(
-                              child: Text(
-                            "Select ",
-                            style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: normal,
-                                color: white666666Color
+                child: Container(
+                  decoration: new BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          blurRadius: 10.0,
+                          color: black000000Color.withOpacity(0.1),
+                          // spreadRadius: 2.0,
 
-                            ),
-                          )),
-                          Icon(
-                            CupertinoIcons.chevron_down,
-                            size: 14,
-                            color: black000000Color,
-
-                          )
-                        ],
+                          offset: Offset(
+                              0.0, // Move to right 7.0 horizontally
+                              2.0))
+                    ],
+                  ),
+                  child: Card(
+                    //shadowColor:black000000Color.withOpacity(0.1),
+                    elevation: 3,
+                    child: Align(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 15),
+                        child: Row(
+                          children: const [
+                            Expanded(
+                                child: Text(
+                              "Select ",
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: normal,
+                                  color: white666666Color),
+                            )),
+                            Icon(
+                              CupertinoIcons.chevron_down,
+                              size: 14,
+                              color: black000000Color,
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -98,11 +107,20 @@ class _PrimaryListDataWidgetState extends State<PrimaryListDataWidget> {
                 child: Container(
                   decoration: new BoxDecoration(
                     boxShadow: [
-                      new BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
-                        blurRadius: 20.0,
+                      BoxShadow(
+                          blurRadius: 10.0,
+                          color: black000000Color.withOpacity(0.1),
+                          // spreadRadius: 2.0,
 
-                      ),
+                          offset: Offset(
+                              0.0, // Move to right 7.0 horizontally
+                              2.0)
+                          // new BoxShadow(
+                          //   offset: Offset(0.5,0.5),
+                          //   color: black000000Color.withOpacity(0.1),
+                          //   blurRadius: 5.0,
+                          //
+                          ),
                     ],
                   ),
                   child: Card(
@@ -116,16 +134,13 @@ class _PrimaryListDataWidgetState extends State<PrimaryListDataWidget> {
                             Expanded(
                                 child: Text(
                               "Select ",
-                                    style: TextStyle(
-                                        fontSize: 11,
-                                        fontWeight: normal,
-                                        color: white666666Color
-
-                                    ),
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: normal,
+                                  color: white666666Color),
                             )),
                             Icon(
                               color: black000000Color,
-
                               CupertinoIcons.chevron_down,
                               size: 14,
                             )
@@ -144,36 +159,48 @@ class _PrimaryListDataWidgetState extends State<PrimaryListDataWidget> {
           const SizedBox(
             height: 20,
           ),
-          _alignText("Group",),
+          _alignText(
+            "Group",
+          ),
           _generateDropDownButton(),
-          SizedBox(height: 10.0,),
+          SizedBox(
+            height: 10.0,
+          ),
           _alignText("Plasticity"),
           _generateDropDownButton(),
-          SizedBox(height: 10.0,),
+          SizedBox(
+            height: 10.0,
+          ),
           _alignText("Colour"),
           _generateDropDownButton(),
-          SizedBox(height: 10.0,),
+          SizedBox(
+            height: 10.0,
+          ),
           _alignText("Moisture"),
           _generateDropDownButton(),
-          SizedBox(height: 10.0,),
+          SizedBox(
+            height: 10.0,
+          ),
           _alignText("Consistency"),
           _generateDropDownButton(),
-          SizedBox(height: 10.0,),
+          SizedBox(
+            height: 10.0,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset("$svgAssetsBasePath/icon3.svg",
+              SvgPicture.asset(
+                "$svgAssetsBasePath/icon3.svg",
                 height: 17,
                 width: 17,
               ),
-              SizedBox(width:4 ,),
+              SizedBox(
+                width: 4,
+              ),
               const Text(
                 "Add another depth",
                 style: TextStyle(
-                  fontSize: 9,
-                    color: blue081E3DColor,
-                    fontWeight: normal
-                ),
+                    fontSize: 9, color: blue081E3DColor, fontWeight: normal),
               )
             ],
           ),
@@ -190,11 +217,7 @@ class _PrimaryListDataWidgetState extends State<PrimaryListDataWidget> {
               child: const Center(
                 child: Text(
                   "Create PDF",
-                  style: TextStyle(
-
-                      color:whiteFFFFFFColor,
-                      fontWeight: normal
-                  ),
+                  style: TextStyle(color: whiteFFFFFFColor, fontWeight: normal),
                 ),
               ),
             ),
@@ -207,25 +230,25 @@ class _PrimaryListDataWidgetState extends State<PrimaryListDataWidget> {
   Widget _generateDropDownButton() {
     return Container(
       decoration: new BoxDecoration(
+      borderRadius: BorderRadius.all(Radius.circular(10)),
         boxShadow: [
-          new BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            blurRadius: 20.0,
-            offset: Offset(0, 4),
-            spreadRadius: 5
-          ),
+          BoxShadow(
+              blurRadius: 10.0,
+              color: black000000Color.withOpacity(0.1),
+              // spreadRadius: 2.0,
+              offset: Offset(
+                  0.0, // Move to right 7.0 horizontally
+                  2.0))
         ],
       ),
       child: Card(
-
-        elevation: 1,
-        child:  Padding(
+        clipBehavior:Clip.antiAlias,
+        elevation: 0,
+        child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: DropdownButtonHideUnderline(
             child: DropdownButton(
-
-              hint: const Text("Select"
-              ),
+              hint: const Text("Select"),
               value: selectedValue,
               isExpanded: true,
               icon: const Icon(
@@ -236,13 +259,13 @@ class _PrimaryListDataWidgetState extends State<PrimaryListDataWidget> {
               items: items
                   .map((e) => DropdownMenuItem(
                         value: e,
-                        child: Text(e,style: TextStyle(
-                            fontSize: 11,
-                            fontWeight: medium,
-                            color: black333333Color
-
-
-                        ),),
+                        child: Text(
+                          e,
+                          style: TextStyle(
+                              fontSize: 11,
+                              fontWeight: medium,
+                              color: black333333Color),
+                        ),
                       ))
                   .toList(),
               onChanged: (value) {
@@ -259,17 +282,15 @@ class _PrimaryListDataWidgetState extends State<PrimaryListDataWidget> {
 
   Widget _alignText(String text) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4,),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 4,
+      ),
       child: Align(
           alignment: Alignment.centerLeft,
           child: Text(
             text,
             style: TextStyle(
-                fontSize: 11,
-                fontWeight: normal,
-                color: white666666Color
-
-            ),
+                fontSize: 11, fontWeight: normal, color: white666666Color),
           )),
     );
   }
